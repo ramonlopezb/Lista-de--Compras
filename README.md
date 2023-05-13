@@ -1,2 +1,2 @@
-# Lista de Precios
- Lista de precios de distintas categoria en un auto mercado
+# Lista de Compras
+ Lista de compras de distintas categoria en un auto mercado
