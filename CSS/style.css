@@ -1,0 +1,84 @@
+body{
+    font-family: roboto,helvetica,Arial, Helvetica, sans-serif;
+}
+main{
+   width: 1050px;
+   height: 600px;
+   display:flex;
+   position:relative;
+
+}
+h1{
+  width:auto;
+  height:50px;
+  align-items: center;
+}
+.lista{
+  position:absolute;
+  width: 500px;
+  height: 70px;
+  left:250px;
+  
+}
+h2{
+  width: 250px;
+  height: 40px;
+  background: blue;
+}
+h2.cont{
+  background-color:green;
+}
+h2.car{
+  background-color: red;
+}
+h2.hog{
+  background-color:aquamarine;
+}
+.container{
+    background: white;
+    padding: 1px;
+    width:450px;
+    height: 450px;
+    position:relative;
+    top: 100px;
+    
+}
+ 
+ .vegetales{
+  position:relative;
+  top:10px;
+  width: 100px;
+  height: 80px;
+
+ }
+ .card{
+   position:absolute;
+   top:60px;
+   padding:1px;
+   margin-top: 3px;
+ }
+ .boton{
+   position:absolute;
+   top:65px;
+   left:200px;
+   bottom:1px;
+   width:30px;
+   height:20px;
+   border-radius:2px;
+   }
+   .boton1{
+   position:absolute;
+   top:65px;
+   bottom:1px;
+   width:30px;
+   height:20px;
+   left:200px;
+   }
+   .boton2{
+    position:absolute;
+   top:65px;
+   bottom:1px;
+   width:30px;
+   height:20px;
+   left:200px;
+   }
