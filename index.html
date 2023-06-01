@@ -12,9 +12,9 @@
 <div >  
     <h1>Lista de Compras</h1>
 </div>
-<div class="contv">
-    <h2 class = "cont">Vegetales</h2>
-     <select class="card">
+<div class="contenedorVegetales">
+    <h2 class = "vegetales">Vegetales</h2>
+     <select class="compras" id = "selector-vegetales"> 
         <label for="vegetales">Vegetales</label>
         <option selected ="vegetales">Vegetales</option>
         <option disabled="">Agregar a Lista de Compras</option>
@@ -25,13 +25,13 @@
         <option value="aji">Aji</option>
      </select>
      <div >
-        <button class="boton">+</button> 
+        <button class="boton" id = "btn-vegetales">+</button> 
     </div> 
     </div>    
 
-    <div class="carn">
-        <h2 class="car">Carniceria</h2>
-        <select class="card">
+    <div class="contenedorCarnes">
+        <h2 class="carniceria">Carniceria</h2>
+        <select class="compras" id = "selector-carnes">
          <label for = "carnes">Carnes</label>
          <option selected ="carnes">Carnes</option>
          <option disabled="">Agregar a Lista de Compras</option>
@@ -42,13 +42,13 @@
          <option value="vacio">Vacio</option>
         </select> 
         <div>
-         <button class="boton1">+</button> 
+         <button class="boton" id ="btn-carniceria">+</button> 
        </div>     
     </div >            
    
-    <div class="hoga">
-        <h2 class="hog">Hogar</h2>
-        <select class="card">
+    <div class="contenedorHogar">
+        <h2 class="hogar">Hogar</h2>
+        <select class="compras" id = "selector-hogar">
          <label for = "hogar">Hogar</label>
          <option selected ="hogar">Hogar</option>
          <option disabled="">Agregar a Lista de Compras</option>
@@ -59,11 +59,11 @@
          <option value="cepillo">Cepillo</option>
         </select>
         <div >
-            <button class="boton2">+</button> 
+            <button class="boton" id = "btn-hogar">+</button> 
         </div>      
    </div> 
    </section>
-   <section class= "section2" >
+   <section class= "section2" id ="section" >
   
    <div id ="container"></div>
    <div id ="container1"></div>

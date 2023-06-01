@@ -34,9 +34,22 @@ body{
 }
 .item{
   width:450px ;
-  height: 200px;
-  background-image: url("../iconos/Accessory_05.png");
+  height:25px;
+  position: relative;
 }
+#letraA{
+  position: absolute;
+  left:1px;
+}
+#tomate{
+  position:absolute;
+  left:100px;
+}
+#letraB{
+  position: absolute;
+  left: 250px;
+}
+
 
 h1{
   width:auto;
@@ -44,20 +57,21 @@ h1{
   align-items: center;
 }
 
-.contv{
+.contenedorVegetales{
   position:absolute;
   top:35px;
   left:20px;
 }
-.carn{
+.contenedorCarnes{
   position:absolute;
   top:35px;
   left:300px;
 }
-.hoga{
+.contenedorHogar{
   position:absolute;
   top:35px;
   left:550px;
+
 }
 h2{
   justify-content: center;
@@ -65,21 +79,21 @@ h2{
   height: 40px;
   background: blue;
 }
-h2.cont{
+h2.vegetales{
   justify-content: center;
   font-size: medium;
   width: 100px;
   background-color:green;
   
 }
-h2.car{
+h2.carniceria{
   background-color: red;
   justify-content: center;
   font-size: medium;
   width: 100px;
  
 }
-h2.hog{
+h2.hogar{
   background-color:aquamarine;
   justify-content: center;
   font-size: medium;
@@ -88,10 +102,11 @@ h2.hog{
 }
 
  
-.card{
+.compras{
    position:absolute;
    top:60px;
    padding:1px;
+   
    margin-top: 3px;
  }
  .boton{
@@ -103,19 +118,4 @@ h2.hog{
    height:20px;
    border-radius:2px;
    }
-   .boton1{
-   position:absolute;
-   top:65px;
-   bottom:1px;
-   width:30px;
-   height:20px;
-   left:200px;
-   }
-   .boton2{
-    position:absolute;
-   top:65px;
-   bottom:1px;
-   width:30px;
-   height:20px;
-   left:200px;
-   }
+   
