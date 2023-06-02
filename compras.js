@@ -33,12 +33,12 @@ section.innerHTML = "";
 selectorVegetales.addEventListener('change', function () {
         vegetalSeleccionado = (this.value);
         });
-//selectorCarnes.addEventListener('change', function () {//
- //       carneSeleccionada = (this.value);//
-            //    });//
-//selectorHogar.addEventListener('change', function () {//
-       // hogarSeleccionado = (this.value);//
-           //             });//
+selectorCarnes.addEventListener('change', function () {
+       carneSeleccionada = (this.value);
+                });
+selectorHogar.addEventListener('change', function () {
+       hogarSeleccionado = (this.value);
+                       });
 
 
 function seleccionVegetales(){
@@ -49,30 +49,100 @@ function seleccionVegetales(){
         padre.classList.add("item"); 
 
         let prefijo = document.createElement("div");
-        prefijo.id = "letraA";
+        prefijo.id = "cajaCheck";
         section.appendChild(prefijo);
         prefijo.innerHTML =` <input type = "checkbox" >` ; 
 
+        
         let nombreDelItem = document.createElement("div");
-        nombreDelItem.id = "tomate";
+        nombreDelItem.id = "listaProducto";
         section.appendChild(nombreDelItem);
         nombreDelItem.innerHTML = `${vegetalSeleccionado}`; 
 
         let sufijo = document.createElement("div");
-        sufijo.id = "letraB";
+        sufijo.id = "desincorporar";
         section.appendChild(sufijo);
         sufijo.innerHTML = `-` ;  
 
-
+        
         padre.appendChild(prefijo);
         padre.appendChild(nombreDelItem);
+
         padre.appendChild(sufijo);}
 
 }
-seleccionVegetales();
+
 
 btnVegetales.addEventListener("click", seleccionVegetales);
 
+
+function seleccionCarnes(){
+        if(!selectorCarnes == 0){
+
+        let padre = document.createElement("div");
+        section.appendChild(padre);
+        padre.classList.add("item"); 
+
+        let prefijo = document.createElement("div");
+        prefijo.id = "cajaCheck";
+        section.appendChild(prefijo);
+        prefijo.innerHTML =` <input type = "checkbox" >` ; 
+
+        
+        let nombreDelItem = document.createElement("div");
+        nombreDelItem.id = "listaProducto";
+        section.appendChild(nombreDelItem);
+        nombreDelItem.innerHTML = `${carneSeleccionada}`; 
+
+        let sufijo = document.createElement("div");
+        sufijo.id = "desincorporar";
+        section.appendChild(sufijo);
+        sufijo.innerHTML = `-` ;  
+
+        
+        padre.appendChild(prefijo);
+        padre.appendChild(nombreDelItem);
+
+        padre.appendChild(sufijo);}
+
+}
+
+
+btnCarniceria.addEventListener("click", seleccionCarnes);
+
+function seleccionHogar(){
+        if(!selectorHogar == 0){
+
+        let padre = document.createElement("div");
+        section.appendChild(padre);
+        padre.classList.add("item"); 
+
+        let prefijo = document.createElement("div");
+        prefijo.id = "cajaCheck";
+        section.appendChild(prefijo);
+        prefijo.innerHTML =` <input type = "checkbox" >` ; 
+
+        
+        let nombreDelItem = document.createElement("div");
+        nombreDelItem.id = "listaProducto";
+        section.appendChild(nombreDelItem);
+        nombreDelItem.innerHTML = `${hogarSeleccionado}`; 
+
+        let sufijo = document.createElement("div");
+        sufijo.id = "desincorporar";
+        section.appendChild(sufijo);
+        sufijo.innerHTML = `-` ;  
+
+        
+        padre.appendChild(prefijo);
+        padre.appendChild(nombreDelItem);
+
+        padre.appendChild(sufijo);}
+
+}
+
+
+btnHogar.addEventListener("click", seleccionHogar);
 
    
 

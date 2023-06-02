@@ -37,18 +37,19 @@ body{
   height:25px;
   position: relative;
 }
-#letraA{
+#cajaCheck{
   position: absolute;
   left:1px;
 }
-#tomate{
+#listaProducto{
   position:absolute;
   left:100px;
 }
-#letraB{
+#desincorporar{
   position: absolute;
   left: 250px;
 }
+
 
 
 h1{
