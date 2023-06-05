@@ -8,12 +8,13 @@ parrafo.innerHTML = "comienza la funcion con js";//insertamos texto al parrafo//
 
 //vamos a insertar el parrafo en el div, se puede insertar cualkquier elemento//
 //contenedorDiv.appendChild(parrafo);decimos que parrafo es hijo de contenedor div//
-const section = document.getElementById("section");
-const vegetales = ["Tomates","Cebollas","Brocolis", "Ajo", "aji"];
-const carniceria = document.getElementById("container1");
-const carnes = ["Asado","Nalga","Peseto", "Picada", "Vacio"];
-const hogar = document.getElementById("container2");
-const lenceria = ["Vasos","Platos","Sabanas", "Copas", "Cepillos"];
+
+//const section = document.getElementById("section");//
+//const vegetales = ["Tomates","Cebollas","Brocolis", "Ajo", "aji"];//
+//const carniceria = document.getElementById("container1");//
+//const carnes = ["Asado","Nalga","Peseto", "Picada", "Vacio"];//
+//const hogar = document.getElementById("container2");//
+//const lenceria = ["Vasos","Platos","Sabanas", "Copas", "Cepillos"];//
 const btnincorporarProducto = document.querySelector(".boton");
 let selectorVegetales = document.getElementById("selector-vegetales");
 let selectorCarnes = document.getElementById("selector-carnes");
@@ -21,6 +22,11 @@ let selectorHogar = document.getElementById("selector-hogar");
 let btnVegetales = document.getElementById("btn-vegetales");
 let btnCarniceria = document.getElementById("btn-carniceria");
 let btnHogar = document.getElementById("btn-hogar");
+const tituloVegetales = document.querySelector("#section-vegetales");
+const tituloCarnes = document.querySelector("#section-carnes");
+const tituloHogar = document.querySelector("#section-hogar");
+
+
 
 let listaCompras = [];
 let seleccionar ;
@@ -28,7 +34,8 @@ let vegetalSeleccionado;
 let carneSeleccionada;
 let hogarSeleccionado;
 
-section.innerHTML = "";
+//section.innerHTML = "";//
+
 
 selectorVegetales.addEventListener('change', function () {
         vegetalSeleccionado = (this.value);
@@ -43,31 +50,31 @@ selectorHogar.addEventListener('change', function () {
 
 function seleccionVegetales(){
         if(!selectorVegetales == 0){
-
+        tituloVegetales.innerHTML = "Vegetales";
         let padre = document.createElement("div");
-        section.appendChild(padre);
-        padre.classList.add("item"); 
+        tituloVegetales.appendChild(padre);
+        padre.classList.add("item");
 
         let prefijo = document.createElement("div");
         prefijo.id = "cajaCheck";
-        section.appendChild(prefijo);
+        tituloVegetales.appendChild(prefijo);
         prefijo.innerHTML =` <input type = "checkbox" >` ; 
 
         
         let nombreDelItem = document.createElement("div");
         nombreDelItem.id = "listaProducto";
-        section.appendChild(nombreDelItem);
+        tituloVegetales.appendChild(nombreDelItem);
         nombreDelItem.innerHTML = `${vegetalSeleccionado}`; 
 
         let sufijo = document.createElement("div");
         sufijo.id = "desincorporar";
-        section.appendChild(sufijo);
-        sufijo.innerHTML = `-` ;  
+        tituloVegetales.appendChild(sufijo);
+        sufijo.innerHTML = `-` ; 
+
 
         
         padre.appendChild(prefijo);
-        padre.appendChild(nombreDelItem);
-
+        padre.appendChild(nombreDelItem);               
         padre.appendChild(sufijo);}
 
 }
@@ -78,31 +85,30 @@ btnVegetales.addEventListener("click", seleccionVegetales);
 
 function seleccionCarnes(){
         if(!selectorCarnes == 0){
-
+        tituloCarnes.innerHTML = "Carnes";
         let padre = document.createElement("div");
-        section.appendChild(padre);
+        tituloCarnes.appendChild(padre);
         padre.classList.add("item"); 
 
         let prefijo = document.createElement("div");
         prefijo.id = "cajaCheck";
-        section.appendChild(prefijo);
+        tituloCarnes.appendChild(prefijo);
         prefijo.innerHTML =` <input type = "checkbox" >` ; 
 
         
         let nombreDelItem = document.createElement("div");
         nombreDelItem.id = "listaProducto";
-        section.appendChild(nombreDelItem);
+        tituloCarnes.appendChild(nombreDelItem);
         nombreDelItem.innerHTML = `${carneSeleccionada}`; 
 
         let sufijo = document.createElement("div");
         sufijo.id = "desincorporar";
-        section.appendChild(sufijo);
+        tituloCarnes.appendChild(sufijo);
         sufijo.innerHTML = `-` ;  
 
         
         padre.appendChild(prefijo);
-        padre.appendChild(nombreDelItem);
-
+        padre.appendChild(nombreDelItem);               
         padre.appendChild(sufijo);}
 
 }
@@ -112,25 +118,25 @@ btnCarniceria.addEventListener("click", seleccionCarnes);
 
 function seleccionHogar(){
         if(!selectorHogar == 0){
-
+        tituloHogar.innerHTML = "Hogar";
         let padre = document.createElement("div");
-        section.appendChild(padre);
+        tituloHogar.appendChild(padre);
         padre.classList.add("item"); 
 
         let prefijo = document.createElement("div");
         prefijo.id = "cajaCheck";
-        section.appendChild(prefijo);
+        tituloHogar.appendChild(prefijo);
         prefijo.innerHTML =` <input type = "checkbox" >` ; 
 
         
         let nombreDelItem = document.createElement("div");
         nombreDelItem.id = "listaProducto";
-        section.appendChild(nombreDelItem);
+        tituloHogar.appendChild(nombreDelItem);
         nombreDelItem.innerHTML = `${hogarSeleccionado}`; 
 
         let sufijo = document.createElement("div");
         sufijo.id = "desincorporar";
-        section.appendChild(sufijo);
+        tituloHogar.appendChild(sufijo);
         sufijo.innerHTML = `-` ;  
 
         

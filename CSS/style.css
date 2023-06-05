@@ -8,50 +8,8 @@ body{
 .section1{
   width: 800px;
   height: 450px;
-  background-color: azure;
+  background-color: aquamarine;
 }
-.section2{
-  position:relative;
-  width: 800px;
-  height: 450px;
-  background-color: aqua;
-}
-#container{
-  position:absolute;
-  top:35;
-  left:20px;
- 
-}
-#container1{
-  position:absolute;
-  top:35px;
-  left:300px
-}
-#container2{
-  position:absolute;
-  top:35px;
-  left:300px
-}
-.item{
-  width:450px ;
-  height:25px;
-  position: relative;
-}
-#cajaCheck{
-  position: absolute;
-  left:1px;
-}
-#listaProducto{
-  position:absolute;
-  left:100px;
-}
-#desincorporar{
-  position: absolute;
-  left: 250px;
-}
-
-
-
 h1{
   width:auto;
   height:50px;
@@ -62,6 +20,7 @@ h1{
   position:absolute;
   top:35px;
   left:20px;
+  
 }
 .contenedorCarnes{
   position:absolute;
@@ -78,17 +37,16 @@ h2{
   justify-content: center;
   width: 200px;
   height: 40px;
-  background: blue;
+  
 }
 h2.vegetales{
   justify-content: center;
   font-size: medium;
   width: 100px;
-  background-color:green;
+ 
   
 }
 h2.carniceria{
-  background-color: red;
   justify-content: center;
   font-size: medium;
   width: 100px;
@@ -107,8 +65,8 @@ h2.hogar{
    position:absolute;
    top:60px;
    padding:1px;
-   
    margin-top: 3px;
+   background-color: blueviolet;
  }
  .boton{
    position:absolute;
@@ -119,4 +77,59 @@ h2.hogar{
    height:20px;
    border-radius:2px;
    }
+   .section2{
+   position:relative;
+   width: 800px;
+   height: 450px;
+   background-color: azure;
+  
+  }
+  .listaContenedorVegetales{
+   position:absolute;
+   top:35px;
+   left:20px;
+  }
+  .listaContenedorCarnes{
+   position:absolute;
+   top:35px;
+   left:300px;
+  }
+  .listaContenedorHogar{
+   position:absolute;
+   top:35px;
+   left:550px;  
+  }
+  #lista-vegetales{
+   position:absolute;
+   top:35;
+   left:20px;
+   
+  }
+  #lista-de-carnes{
+   position:absolute;
+   top:35px;
+   left:300px
+  }
+  #lista-hogar{
+   position:absolute;
+   top:35px;
+   left:300px
+  }
+  .item{
+   width:450px ;
+   height:25px;
+   position: relative;
+  }
+  #cajaCheck{
+   position: absolute;
+   left:1px;
+  }
+  #listaProducto{
+   position:absolute;
+   left:100px;
+  }
+  #desincorporar{
+   position: absolute;
+   left: 250px;
+  }
    
