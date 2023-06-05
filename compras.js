@@ -51,7 +51,7 @@ selectorHogar.addEventListener('change', function () {
 escuchar();
 function seleccionVegetales(){
         if(!selectorVegetales == 0){
-        tituloVegetales.innerHTML = "Vegetales";
+        //tituloVegetales.innerHTML = "Vegetales";//
         let padre = document.createElement("div");
         tituloVegetales.appendChild(padre);
         padre.classList.add("item");
@@ -59,8 +59,7 @@ function seleccionVegetales(){
         let prefijo = document.createElement("div");
         prefijo.id = "cajaCheck";
         tituloVegetales.appendChild(prefijo);
-        prefijo.innerHTML =` <input type = "checkbox" >`; 
-
+        prefijo.innerHTML =` <input type = "checkbox" >`;
         
         let nombreDelItem = document.createElement("div");
         nombreDelItem.id = "listaProducto";
@@ -71,12 +70,11 @@ function seleccionVegetales(){
         sufijo.id = "desincorporar";
         tituloVegetales.appendChild(sufijo);
         sufijo.innerHTML = `-` ; 
-
-
         
         padre.appendChild(prefijo);
         padre.appendChild(nombreDelItem);               
-        padre.appendChild(sufijo);}
+        padre.appendChild(sufijo);
+}
 
 }
 
@@ -86,7 +84,7 @@ function seleccionVegetales(){
 
 function seleccionCarnes(){
         if(!selectorCarnes == 0){
-        tituloCarnes.innerHTML = "Carnes";
+        //tituloCarnes.innerHTML = "Carnes";//
         let padre = document.createElement("div");
         tituloCarnes.appendChild(padre);
         padre.classList.add("item"); 
@@ -110,7 +108,8 @@ function seleccionCarnes(){
         
         padre.appendChild(prefijo);
         padre.appendChild(nombreDelItem);               
-        padre.appendChild(sufijo);}
+        padre.appendChild(sufijo);
+}
 
 }
 
@@ -119,7 +118,7 @@ function seleccionCarnes(){
 
 function seleccionHogar(){
         if(!selectorHogar == 0){
-        tituloHogar.innerHTML = "Hogar";
+        //tituloHogar.innerHTML = "Hogar";//
         let padre = document.createElement("div");
         tituloHogar.appendChild(padre);
         padre.classList.add("item"); 
