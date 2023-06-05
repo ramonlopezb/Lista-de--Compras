@@ -42,12 +42,13 @@ selectorVegetales.addEventListener('change', function () {
         });
 selectorCarnes.addEventListener('change', function () {
        carneSeleccionada = (this.value);
-                });
+                       });
+                
 selectorHogar.addEventListener('change', function () {
        hogarSeleccionado = (this.value);
                        });
 
-
+escuchar();
 function seleccionVegetales(){
         if(!selectorVegetales == 0){
         tituloVegetales.innerHTML = "Vegetales";
@@ -58,7 +59,7 @@ function seleccionVegetales(){
         let prefijo = document.createElement("div");
         prefijo.id = "cajaCheck";
         tituloVegetales.appendChild(prefijo);
-        prefijo.innerHTML =` <input type = "checkbox" >` ; 
+        prefijo.innerHTML =` <input type = "checkbox" >`; 
 
         
         let nombreDelItem = document.createElement("div");
@@ -80,7 +81,7 @@ function seleccionVegetales(){
 }
 
 
-btnVegetales.addEventListener("click", seleccionVegetales);
+
 
 
 function seleccionCarnes(){
@@ -114,7 +115,7 @@ function seleccionCarnes(){
 }
 
 
-btnCarniceria.addEventListener("click", seleccionCarnes);
+
 
 function seleccionHogar(){
         if(!selectorHogar == 0){
@@ -142,13 +143,17 @@ function seleccionHogar(){
         
         padre.appendChild(prefijo);
         padre.appendChild(nombreDelItem);
-
-        padre.appendChild(sufijo);}
+        padre.appendChild(sufijo);
+}
 
 }
 
+function escuchar(){
+        btnVegetales.addEventListener("click", seleccionVegetales);
+        btnCarniceria.addEventListener("click", seleccionCarnes);
+        btnHogar.addEventListener("click", seleccionHogar);
 
-btnHogar.addEventListener("click", seleccionHogar);
+}
 
    
 

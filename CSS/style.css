@@ -2,11 +2,10 @@ body{
     width: 1200px;
     height: 900px;
     font-family: roboto,helvetica,Arial, Helvetica, sans-serif;
-    background-color: #FFC300;
     position:relative;
 }
-.section1{
-  width: 800px;
+.section0{
+  width: 1200px;
   height: 450px;
   background-color: aquamarine;
 }
@@ -39,13 +38,11 @@ h2{
   height: 40px;
   
 }
-h2.vegetales{
+/*h2.vegetales{
   justify-content: center;
   font-size: medium;
-  width: 100px;
- 
-  
-}
+  width: 100px; 
+}*/
 h2.carniceria{
   justify-content: center;
   font-size: medium;
@@ -53,14 +50,11 @@ h2.carniceria{
  
 }
 h2.hogar{
-  background-color:aquamarine;
   justify-content: center;
   font-size: medium;
   width: 100px;
     
-}
-
- 
+} 
 .compras{
    position:absolute;
    top:60px;
@@ -77,17 +71,60 @@ h2.hogar{
    height:20px;
    border-radius:2px;
    }
+   .section1{
+    position:relative;
+    width: 1200px;
+    height: 450px;
+    background-color:beige
+     }
    .section2{
-   position:relative;
-   width: 800px;
-   height: 450px;
-   background-color: azure;
-  
-  }
+   position:absolute;
+   top:20px;
+   width: 270 px;
+   height: 250px;
+   background-color:blue;
+    }
+  .section3{
+    position: absolute;
+    top:20px;
+    left:327px;
+    width: 270px;
+    height: 250px;
+    background-color:red;
+   
+   }
+   .section4{
+    position: absolute;
+    top:20px;
+    right:50px;
+    left:600px;
+    width: 270px;
+    height: 250px;
+    background-color: rgb(37, 129, 129);
+   
+   }
   .listaContenedorVegetales{
    position:absolute;
    top:35px;
    left:20px;
+  }
+  h2.tituloVegetales{
+    justify-content: center;
+    width: 100px;
+    height: 30px;
+
+  }
+  h2.tituloCarnes{
+    justify-content: center;
+    width: 100px;
+    height: 30px;
+
+  }
+  h2.tituloHogar{
+    justify-content: center;
+    width: 100px;
+    height: 30px;
+
   }
   .listaContenedorCarnes{
    position:absolute;
@@ -99,12 +136,12 @@ h2.hogar{
    top:35px;
    left:550px;  
   }
-  #lista-vegetales{
+  /*#lista-vegetales{
    position:absolute;
    top:35;
    left:20px;
    
-  }
+  }*/
   #lista-de-carnes{
    position:absolute;
    top:35px;
