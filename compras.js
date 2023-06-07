@@ -27,7 +27,6 @@ const tituloCarnes = document.querySelector("#section-carnes");
 const tituloHogar = document.querySelector("#section-hogar");
 
 
-
 let listaCompras = [];
 let seleccionar ;
 let vegetalSeleccionado;
@@ -51,7 +50,6 @@ selectorHogar.addEventListener('change', function () {
 escuchar();
 function seleccionVegetales(){
         if(!selectorVegetales == 0){
-        //tituloVegetales.innerHTML = "Vegetales";//
         let padre = document.createElement("div");
         tituloVegetales.appendChild(padre);
         padre.classList.add("item");
@@ -66,14 +64,18 @@ function seleccionVegetales(){
         tituloVegetales.appendChild(nombreDelItem);
         nombreDelItem.innerHTML = `${vegetalSeleccionado}`; 
 
-        let sufijo = document.createElement("div");
+       /* let sufijo = document.createElement("div");
         sufijo.id = "desincorporar";
         tituloVegetales.appendChild(sufijo);
-        sufijo.innerHTML = `-` ; 
+        sufijo.innerHTML = `-` ; */
+        let btnEliminarProducto = document.createElement("button");
+        btnEliminarProducto.id = "desincorporar";
+        tituloVegetales.appendChild(btnEliminarProducto);
+        btnEliminarProducto.innerHTML = `-`;
         
         padre.appendChild(prefijo);
         padre.appendChild(nombreDelItem);               
-        padre.appendChild(sufijo);
+        padre.appendChild(btnEliminarProducto);
 }
 
 }
@@ -84,7 +86,6 @@ function seleccionVegetales(){
 
 function seleccionCarnes(){
         if(!selectorCarnes == 0){
-        //tituloCarnes.innerHTML = "Carnes";//
         let padre = document.createElement("div");
         tituloCarnes.appendChild(padre);
         padre.classList.add("item"); 
@@ -100,15 +101,15 @@ function seleccionCarnes(){
         tituloCarnes.appendChild(nombreDelItem);
         nombreDelItem.innerHTML = `${carneSeleccionada}`; 
 
-        let sufijo = document.createElement("div");
-        sufijo.id = "desincorporar";
-        tituloCarnes.appendChild(sufijo);
-        sufijo.innerHTML = `-` ;  
+        let btnEliminarProducto = document.createElement("button");
+        btnEliminarProducto.id = "desincorporar";
+        tituloCarnes.appendChild(btnEliminarProducto);
+        btnEliminarProducto.innerHTML = `-` ;  
 
         
         padre.appendChild(prefijo);
         padre.appendChild(nombreDelItem);               
-        padre.appendChild(sufijo);
+        padre.appendChild(btnEliminarProducto);
 }
 
 }
@@ -118,7 +119,6 @@ function seleccionCarnes(){
 
 function seleccionHogar(){
         if(!selectorHogar == 0){
-        //tituloHogar.innerHTML = "Hogar";//
         let padre = document.createElement("div");
         tituloHogar.appendChild(padre);
         padre.classList.add("item"); 
@@ -134,15 +134,15 @@ function seleccionHogar(){
         tituloHogar.appendChild(nombreDelItem);
         nombreDelItem.innerHTML = `${hogarSeleccionado}`; 
 
-        let sufijo = document.createElement("div");
-        sufijo.id = "desincorporar";
-        tituloHogar.appendChild(sufijo);
-        sufijo.innerHTML = `-` ;  
+        let btnEliminarProducto = document.createElement("button");
+        btnEliminarProducto.id = "desincorporar";
+        tituloHogar.appendChild(btnEliminarProducto);
+        btnEliminarProducto.innerHTML = `-` ;  
 
         
         padre.appendChild(prefijo);
         padre.appendChild(nombreDelItem);
-        padre.appendChild(sufijo);
+        padre.appendChild(btnEliminarProducto);
 }
 
 }

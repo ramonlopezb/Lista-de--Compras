@@ -38,11 +38,11 @@ h2{
   height: 40px;
   
 }
-/*h2.vegetales{
+h2.vegetales{
   justify-content: center;
   font-size: medium;
   width: 100px; 
-}*/
+}
 h2.carniceria{
   justify-content: center;
   font-size: medium;
@@ -120,12 +120,12 @@ h2.hogar{
     height: 30px;
 
   }
-  h2.tituloHogar{
+ /* h2.tituloHogar{
     justify-content: center;
     width: 100px;
     height: 30px;
 
-  }
+  }*/
   .listaContenedorCarnes{
    position:absolute;
    top:35px;
@@ -136,12 +136,12 @@ h2.hogar{
    top:35px;
    left:550px;  
   }
-  /*#lista-vegetales{
+  #lista-vegetales{
    position:absolute;
    top:35;
    left:20px;
    
-  }*/
+  }
   #lista-de-carnes{
    position:absolute;
    top:35px;
