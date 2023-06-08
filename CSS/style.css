@@ -158,15 +158,21 @@ h2.hogar{
    position: relative;
   }
   #cajaCheck{
+    width: auto;
+    height: auto;
    position: absolute;
    left:1px;
   }
   #listaProducto{
+    width: auto;
+    height: auto;
    position:absolute;
    left:100px;
   }
   #desincorporar{
    position: absolute;
+   width: auto;
+   height: auto;
    left: 250px;
   }
    

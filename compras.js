@@ -27,6 +27,8 @@ const tituloCarnes = document.querySelector("#section-carnes");
 const tituloHogar = document.querySelector("#section-hogar");
 
 
+
+
 let listaCompras = [];
 let seleccionar ;
 let vegetalSeleccionado;
@@ -64,10 +66,7 @@ function seleccionVegetales(){
         tituloVegetales.appendChild(nombreDelItem);
         nombreDelItem.innerHTML = `${vegetalSeleccionado}`; 
 
-       /* let sufijo = document.createElement("div");
-        sufijo.id = "desincorporar";
-        tituloVegetales.appendChild(sufijo);
-        sufijo.innerHTML = `-` ; */
+       
         let btnEliminarProducto = document.createElement("button");
         btnEliminarProducto.id = "desincorporar";
         tituloVegetales.appendChild(btnEliminarProducto);
@@ -76,12 +75,16 @@ function seleccionVegetales(){
         padre.appendChild(prefijo);
         padre.appendChild(nombreDelItem);               
         padre.appendChild(btnEliminarProducto);
+
+        function btnClickVegetales(e){
+                console.log("hola Mi reina");
+        }
+        
+        btnEliminarProducto.addEventListener("click", btnClickVegetales);
+        console.log(btnEliminarProducto);
 }
 
 }
-
-
-
 
 
 function seleccionCarnes(){
@@ -110,11 +113,16 @@ function seleccionCarnes(){
         padre.appendChild(prefijo);
         padre.appendChild(nombreDelItem);               
         padre.appendChild(btnEliminarProducto);
+
+        function btnClickCarnes(e){
+                console.log("hola Mi reina");
+        }
+        
+        btnEliminarProducto.addEventListener("click", btnClickCarnes);
+        console.log(btnEliminarProducto);
 }
 
 }
-
-
 
 
 function seleccionHogar(){
@@ -143,9 +151,21 @@ function seleccionHogar(){
         padre.appendChild(prefijo);
         padre.appendChild(nombreDelItem);
         padre.appendChild(btnEliminarProducto);
+        
+        function btnClickHogar(e){
+                console.log("hola Mi reina");
+        }
+        
+        btnEliminarProducto.addEventListener("click", btnClickHogar);
+        console.log(btnEliminarProducto);
 }
 
 }
+
+   
+
+
+
 
 function escuchar(){
         btnVegetales.addEventListener("click", seleccionVegetales);
