@@ -22,9 +22,9 @@ let selectorHogar = document.getElementById("selector-hogar");
 let btnVegetales = document.getElementById("btn-vegetales");
 let btnCarniceria = document.getElementById("btn-carniceria");
 let btnHogar = document.getElementById("btn-hogar");
-const tituloVegetales = document.querySelector("#section-vegetales");
-const tituloCarnes = document.querySelector("#section-carnes");
-const tituloHogar = document.querySelector("#section-hogar");
+const listaVegetales = document.getElementById("lista-vegetales");
+const listaCarnes = document.getElementById("lista-de-carnes");
+const listaHogar = document.querySelector("lista-hogar");
 
 
 
@@ -50,41 +50,68 @@ selectorHogar.addEventListener('change', function () {
                        });
 
 escuchar();
+
 function seleccionVegetales(){
+        if(listaVegetales.children.length > 0)
+        {
+                for(let i=0; listaVegetales.children.length ;i++) //por cada vegetal que el usuario haya seleccionado
+                {               
+                        if(listaVegetales.children[i] == null) // no entiendo?
+                        {
+                                break;
+                        }
+                        if(listaVegetales.children[i].children[1].innerHTML ==vegetalSeleccionado) //entre los hijos del titulo de vegetales, revisar si su hijo numero 1 (es decir, Nombre del item), es igual al que escogio el usuario. Si lo es, sumar uno a la cantidad existente. Si no existe, crear uno nuevo
+                        {                        
+                                if(listaVegetales.children[i].children.length <3) continue; //confirmando que existe el elemento 3ro del array 
+                                let cantidadDelItem = parseInt(listaVegetales.children[i].children[2].innerHTML); //obtiene el int del children numero 2
+                                cantidadDelItem++;  //esto suma 1 al segundo children que en este caso debe ser
+                                listaVegetales.children[i].children[2].innerHTML = cantidadDelItem; //reasignamos el numero que se incremento para que se vea
+                                return; // este return previene la ejecucion de la linea con generarvegetal();
+                        }
+                } 
+        }     
+        
+        generarVegetal();
+}
+
+function generarVegetal(){
         if(!selectorVegetales == 0){
-        let padre = document.createElement("div");
-        tituloVegetales.appendChild(padre);
-        padre.classList.add("item");
-
-        let prefijo = document.createElement("div");
-        prefijo.id = "cajaCheck";
-        tituloVegetales.appendChild(prefijo);
-        prefijo.innerHTML =` <input type = "checkbox" >`;
+                let padre = document.createElement("div");
+                padre.id = vegetalSeleccionado+"ID";
+                listaVegetales.appendChild(padre);
+                padre.classList.add("item");
         
-        let nombreDelItem = document.createElement("div");
-        nombreDelItem.id = "listaProducto";
-        tituloVegetales.appendChild(nombreDelItem);
-        nombreDelItem.innerHTML = `${vegetalSeleccionado}`; 
-
-       
-        let btnEliminarProducto = document.createElement("button");
-        btnEliminarProducto.id = "desincorporar";
-        tituloVegetales.appendChild(btnEliminarProducto);
-        btnEliminarProducto.innerHTML = `-`;
+                let prefijo = document.createElement("div");
+                prefijo.id = "cajaCheck";
+                prefijo.innerHTML =` <input type = "checkbox" >`;
+                
+                let nombreDelItem = document.createElement("div");
+                nombreDelItem.id = vegetalSeleccionado;
+                nombreDelItem.innerHTML = `${vegetalSeleccionado}`;
         
-        padre.appendChild(prefijo);
-        padre.appendChild(nombreDelItem);               
-        padre.appendChild(btnEliminarProducto);
+                let cantidadDelItem = document.createElement("div"); //creamos un div nuevo para la cantidad
+                cantidadDelItem.id = "cantidadDe"+vegetalSeleccionado; //cantidadDe vegetal seleccionado como ID
+                cantidadDelItem.innerHTML = `1`; //1 item porque es el primero
+               
+                let btnEliminarProducto = document.createElement("button");
+                btnEliminarProducto.id = "desincorporar";
+                btnEliminarProducto.innerHTML = `-`;
+                
+                padre.appendChild(prefijo);
+                padre.appendChild(nombreDelItem);      
+                padre.appendChild(cantidadDelItem); //nos aseguramos que el div sea el hijo numero 2 
+                padre.appendChild(btnEliminarProducto);                       
+                
+                
+                btnEliminarProducto.addEventListener("click",  function () {
+                        desincorporarVegetales(vegetalSeleccionado);
+                });
+}
 
-        function btnClickVegetales(e){
-                console.log("hola Mi reina");
+}
+function desincorporarVegetales(nombreDelItem){
+                console.log(nombreDelItem);
         }
-        
-        btnEliminarProducto.addEventListener("click", btnClickVegetales);
-        console.log(btnEliminarProducto);
-}
-
-}
 
 
 function seleccionCarnes(){
