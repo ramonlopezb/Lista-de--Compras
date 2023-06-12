@@ -84,6 +84,11 @@ h2.hogar{
     height: 450px;
     background-color:beige
      }
+     .item{
+      width:230px;
+      height:25px;
+      position: relative;
+     }
    .section2{
    position:absolute;
    top:20px;
@@ -91,6 +96,116 @@ h2.hogar{
    height: 250px;
    background-color:blue;
     }
+    .listaContenedorVegetales{
+      position:absolute;
+      width: 80px;
+      height: 50px;
+      top:20px;
+      left:20px;
+     }
+     h2.tituloVegetales{
+      justify-items: auto;
+      width: 50px;
+      height: 5px;
+      top: 25px;
+  
+    }
+    #lista-vegetales{
+      position:absolute;
+      width: 80px;
+      height: 20px;
+      top:35;
+      left:5px;
+      
+     }
+     #cajaCheck{
+      width: 5px;
+      height: 3px;
+      position: absolute;
+      left:10px;
+     }
+     #tomates{
+       position:absolute;
+       width: 20px;
+       height: 5px;
+       color:black;
+       left: 50px;
+     }
+     #cantidadDetomates{
+       position: absolute;
+       width: 5px;
+       height: 3px;
+       left: 35px;
+     }
+     #cebollas{
+       position:absolute;
+       width: 20px;
+       height: 5px;
+       color:black;
+       left: 50px;
+     }
+     #cantidadDecebollas{
+       position: absolute;
+       width: 5px;
+       height: 3px;
+       left: 35px;
+     }
+     #brocolis{
+       position:absolute;
+       width: 20px;
+       height: 5px;
+       color:black;
+       left: 50px;
+     }
+     #cantidadDebrocolis{
+       position: absolute;
+       width: 5px;
+       height: 3px;
+       left: 35px;
+     }
+     #ajo{
+       position:absolute;
+       width: 20px;
+       height: 5px;
+       color:black;
+       left: 50px;
+     }
+     #cantidadDeajo{
+       position: absolute;
+       width: 5px;
+       height: 3px;
+       left: 35px;
+     }
+     #aji{
+       position:absolute;
+       width: 20px;
+       height: 5px;
+       color:black;
+       left: 50px;
+     }
+     #cantidadDeaji{
+       position: absolute;
+       width: 5px;
+       height: 3px;
+       left: 35px;
+     }
+     #desincorporar{
+      position: absolute;
+      top:5px;
+      width: auto;
+      height: auto;   
+      left: 200px;
+     }
+   
+   
+    /* #listaProducto{
+      width: auto;
+      height: auto;
+      position:absolute;
+      left:300px;
+     }*/
+   
+
   .section3{
     position: absolute;
     top:20px;
@@ -100,6 +215,76 @@ h2.hogar{
     background-color:red;
    
    }
+   .listaContenedorCarnes{
+    position:absolute;
+    width: 80px;
+    height: 50px;
+    top:20px;
+    left:20px;
+   }
+   h2.tituloCarnes{
+    justify-content: center;
+    width: 80px;
+    height: 30px;
+  }
+  #lista-de-carnes{
+    position:absolute;
+    top:35px;
+    left:5px;
+   }
+   #asado{
+    position:absolute;
+    width: 20px;
+    height: 5px;
+    color:black;
+    left: 50px;
+  }
+  #cantidadDeasado{
+    position: absolute;
+    width: 5px;
+    height: 3px;
+    left: 35px;
+  }
+  #peseto{
+    position:absolute;
+    width: 20px;
+    height: 5px;
+    color:black;
+    left: 50px;
+  }
+  #cantidadDepeseto{
+    position: absolute;
+    width: 5px;
+    height: 3px;
+    left: 35px;
+  }
+  #picada{
+    position:absolute;
+    width: 20px;
+    height: 5px;
+    color:black;
+    left: 50px;
+  }
+  #cantidadDepicada{
+    position: absolute;
+    width: 5px;
+    height: 3px;
+    left: 35px;
+  }
+  #vacio{
+    position:absolute;
+    width: 20px;
+    height: 5px;
+    color:black;
+    left: 50px;
+  }
+  #cantidadDevacio{
+    position: absolute;
+    width: 5px;
+    height: 3px;
+    left: 35px;
+  }
+
    .section4{
     position: absolute;
     top:20px;
@@ -109,79 +294,35 @@ h2.hogar{
     height: 250px;
     background-color: rgb(37, 129, 129);
    
+   }  
+  
+   .listaContenedorHogar{
+    position:absolute;
+    width: 80px;
+    height: 50px;
+    top:5px;
+    left:20px;  
    }
-  .listaContenedorVegetales{
-   position:absolute;
-   width: 80px;
-   height: 50px;
-   top:20px;
-   left:20px;
-  }
-  h2.tituloVegetales{
-    justify-content: center;
-    width: 80px;
-    height: 30px;
-
-  }
-  h2.tituloCarnes{
-    justify-content: center;
-    width: 80px;
-    height: 30px;
-
-  }
+  
+  
   h2.tituloHogar{
     justify-content: center;
     width: 80px;
     height: 30px;
 
-  }
-  .listaContenedorCarnes{
-   position:absolute;
-   top:35px;
-   left:300px;
-  }
-  .listaContenedorHogar{
-   position:absolute;
-   top:35px;
-   left:550px;  
-  }
-  #lista-vegetales{
-   position:absolute;
-   top:35;
-   left:20px;
-   
-  }
-  #lista-de-carnes{
-   position:absolute;
-   top:35px;
-   left:300px
-  }
+  } 
+  
+  
   #lista-hogar{
    position:absolute;
+   width: 80px;
+   height: 20px;
+   top:35;
+   left:5px;
    top:35px;
-   left:300px
-  }
-  .item{
-   width:250px;
-   height:25px;
-   position: relative;
-  }
-  #cajaCheck{
-    width: auto;
-    height: auto;
-   position: absolute;
-   left:1px;
-  }
-  #listaProducto{
-    width: auto;
-    height: auto;
-   position:absolute;
-   left:100px;
-  }
-  #desincorporar{
-   position: absolute;
-   width: auto;
-   height: auto;
-   left: 250px;
-  }
+    }
+  
+  
+  
+  
    
