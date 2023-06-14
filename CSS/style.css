@@ -245,20 +245,20 @@ h2.hogar{
     height: 3px;
     left: 35px;
   }
- /* #tapaDeNalga{
+  #paleta{
     position:absolute;
     width: 50px;
     height: 5px;
     color:black;
-    left: 200px;
-  }*/
- /* #cantidadDetapaDeNalga{
+    left: 50px;
+  }
+  #cantidadDepaleta{
     position:absolute;
     width: 20px;
     height: 5px;
     color:black;
-    left: 200px; 
-  }*/
+    left: 35px; 
+  }
   #peseto{
     position:absolute;
     width: 20px;

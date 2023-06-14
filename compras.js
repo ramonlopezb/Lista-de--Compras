@@ -124,6 +124,10 @@ function desincorporarVegetales(){
         }     
                
         }
+
+       /* function EliminarVegetales(){
+                this.padre.id.removeChild(this);
+        }*/
        // console.log(desincorporarVegetales);//
 
        function seleccionCarnes(){
