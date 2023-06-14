@@ -9,12 +9,7 @@ parrafo.innerHTML = "comienza la funcion con js";//insertamos texto al parrafo//
 //vamos a insertar el parrafo en el div, se puede insertar cualkquier elemento//
 //contenedorDiv.appendChild(parrafo);decimos que parrafo es hijo de contenedor div//
 
-//const section = document.getElementById("section");//
-//const vegetales = ["Tomates","Cebollas","Brocolis", "Ajo", "aji"];//
-//const carniceria = document.getElementById("container1");//
-//const carnes = ["Asado","Nalga","Peseto", "Picada", "Vacio"];//
-//const hogar = document.getElementById("container2");//
-//const lenceria = ["Vasos","Platos","Sabanas", "Copas", "Cepillos"];//
+
 const btnincorporarProducto = document.querySelector(".boton");
 let selectorVegetales = document.getElementById("selector-vegetales");
 let selectorCarnes = document.getElementById("selector-carnes");
@@ -177,7 +172,6 @@ function generarCarnes(){
 
         let btnEliminarProducto = document.createElement("button");
         btnEliminarProducto.id = "desincorporar";
-        //tituloCarnes.appendChild(btnEliminarProducto);//
         btnEliminarProducto.innerHTML = `-` ;  
 
         
@@ -190,18 +184,19 @@ function generarCarnes(){
         
         btnEliminarProducto.addEventListener("click", function () {
                 desincorporarCarnes(carneSeleccionada);
-        })
-
-        
+        })        
         
 }
+}
 function desincorporarCarnes(){
-        if(listaCarnes.length > 0)
-        for(let i = 0; i<listaCarnes.length; i++)
+        if(listaCarnes.children.length > 0)
+        {
+
+        for(let i = 0; i < listaCarnes.children.length; i++)
         {
                 if(listaCarnes.children[i].children[1].innerHTML == carneSeleccionada)
                 {
-                        if(listaCarnes.children[i].children.length <3) continue; 
+                        if(listaCarnes.children[i].children.length < 3) continue; 
                         let cantidadDelItem = parseInt(listaCarnes.children[i].children[2].innerHTML); 
                         cantidadDelItem --;
                         listaCarnes.children[i].children[2].innerHTML = cantidadDelItem;
@@ -209,12 +204,13 @@ function desincorporarCarnes(){
                 }
         }
 }
-
 }
+
+
 function seleccionHogar(){
         if(listaHogar.children.length > 0)
         {
-                for(let i=0; i < listaHogar.children.length ; i++) //por cada vegetal que el usuario haya seleccionado
+                for(let i=0; i < listaHogar.children.length ; i++) 
                 {               
                         
                   
@@ -227,10 +223,12 @@ function seleccionHogar(){
                                 return; // este return previene la ejecucion de la linea con generarvegetal();
                         }
                 } 
-        }  
-}   
+        }
         
         generarHogar();
+}   
+        
+      
 
 
 
@@ -284,7 +282,7 @@ function desincorporarHogar(){
                         
                         {                        
                                 if(listaHogar.children[i].children.length <3) continue; //confirmando que existe el elemento 3ro del array 
-                                let cantidadDelItem = parseInt(listaVegetales.children[i].children[2].innerHTML);// obtiene el int del children numero 2//
+                                let cantidadDelItem = parseInt(listaHogar.children[i].children[2].innerHTML);// obtiene el int del children numero 2//
                                 cantidadDelItem --;  //esto resta 1 al segundo children que en este caso debe ser
                                 listaHogar.children[i].children[2].innerHTML = cantidadDelItem;// reasignamos el numero que se resto para que se vea//
                                 return; // este return previene la ejecucion de la linea con generarvegetal();

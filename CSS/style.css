@@ -245,6 +245,20 @@ h2.hogar{
     height: 3px;
     left: 35px;
   }
+ /* #tapaDeNalga{
+    position:absolute;
+    width: 50px;
+    height: 5px;
+    color:black;
+    left: 200px;
+  }*/
+ /* #cantidadDetapaDeNalga{
+    position:absolute;
+    width: 20px;
+    height: 5px;
+    color:black;
+    left: 200px; 
+  }*/
   #peseto{
     position:absolute;
     width: 20px;
@@ -303,6 +317,7 @@ h2.hogar{
     top:5px;
     left:20px;  
    }
+
   
   
   h2.tituloHogar{
@@ -320,6 +335,71 @@ h2.hogar{
    top:35;
    left:5px;
    top:35px;
+    }
+    #vasos{
+      position:absolute;
+      width: 20px;
+      height: 5px;
+      color:black;
+      left: 50px;
+    }
+    #cantidadDevasos{
+      position: absolute;
+      width: 5px;
+      height: 3px;
+      left: 35px;
+    }
+    #platos{
+      position:absolute;
+      width: 20px;
+      height: 5px;
+      color:black;
+      left: 50px;
+    }
+    #cantidadDeplatos{
+      position: absolute;
+      width: 5px;
+      height: 3px;
+      left: 35px;
+    }
+    #sabanas{
+      position:absolute;
+      width: 20px;
+      height: 5px;
+      color:black;
+      left: 50px;
+    }
+    #cantidadDesabanas{
+      position: absolute;
+      width: 5px;
+      height: 3px;
+      left: 35px;
+    }
+    #copas{
+      position:absolute;
+      width: 20px;
+      height: 5px;
+      color:black;
+      left: 50px;
+    }
+    #cantidadDecopas{
+      position: absolute;
+      width: 5px;
+      height: 3px;
+      left: 35px;
+    }
+    #cepillo{
+      position:absolute;
+      width: 20px;
+      height: 5px;
+      color:black;
+      left: 50px;
+    }
+    #cantidadDecepillo{
+      position: absolute;
+      width: 5px;
+      height: 3px;
+      left: 35px;
     }
   
   
