@@ -1,15 +1,3 @@
-/*const contenedorDiv = document.createElement("div");//creamos un contenedor//
-document.body.appendChild(contenedorDiv);//insertamos el div en el body de html//
-contenedorDiv.id ="contenedor";//aqui se añade un atributo, en este caso id//
-
-const parrafo = document.createElement("p");//creamos un parrafo//
-parrafo.innerHTML = "comienza la funcion con js";//insertamos texto al parrafo//
-/*document.body.appendChild(parrafo); insertamos el parrafo al body de html*/
-
-//vamos a insertar el parrafo en el div, se puede insertar cualkquier elemento//
-//contenedorDiv.appendChild(parrafo);decimos que parrafo es hijo de contenedor div//
-
-
 const btnincorporarProducto = document.querySelector(".boton");
 let selectorVegetales = document.getElementById("selector-vegetales");
 let selectorCarnes = document.getElementById("selector-carnes");
@@ -21,16 +9,9 @@ const listaVegetales = document.getElementById("lista-vegetales");
 const listaCarnes = document.getElementById("lista-de-carnes");
 const listaHogar = document.getElementById("lista-hogar");
 
-
-
-
-let listaCompras = [];
-let seleccionar ;
 let vegetalSeleccionado;
 let carneSeleccionada;
 let hogarSeleccionado;
-
-//section.innerHTML = "";//
 
 
 selectorVegetales.addEventListener('change', function () {
@@ -65,10 +46,8 @@ function seleccionVegetales(){
                 } 
         } 
         
-       
-        
-        generarVegetal();
-       
+              
+        generarVegetal();       
 }
 
 function generarVegetal(){
@@ -102,65 +81,52 @@ function generarVegetal(){
                 
                 btnEliminarProducto.addEventListener("click",  function () {
                         desincorporarVegetales(vegetalSeleccionado);
-                });  
-                     
+                });                    
               
 }
-
 }
+
 function desincorporarVegetales(){
         if(listaVegetales.children.length > 0)
         {
-                for(let i=0; i < listaVegetales.children.length; i++) //por cada vegetal que el usuario haya seleccionado//
+                for(let i=0; i < listaVegetales.children.length; i++) 
                 {               
                         
                   
-                        if(listaVegetales.children[i].children[1].innerHTML == vegetalSeleccionado) /*entre los hijos del titulo de vegetales, revisar si su hijo numero  1 (es decir, Nombre del item), es igual al que escogio el usuario. Si lo es, sumar uno a la cantidad existente. Si no existe, crear uno nuevo*/
+                        if(listaVegetales.children[i].children[1].innerHTML == vegetalSeleccionado) 
                         
                         {                        
-                                if(listaVegetales.children[i].children.length <3) continue; //confirmando que existe el elemento 3ro del array //
-                                let cantidadDelItem = parseInt(listaVegetales.children[i].children[2].innerHTML);// obtiene el int del children numero 2//
+                                if(listaVegetales.children[i].children.length <3) continue; 
+                                let cantidadDelItem = parseInt(listaVegetales.children[i].children[2].innerHTML);
                                 cantidadDelItem --;
                                 listaVegetales.children[i].children[2].innerHTML= cantidadDelItem;
-                                if(cantidadDelItem < 0){
-                                        console.log("logica")
-                                        
+                                if(cantidadDelItem <= 0){
+                                                                               
                                         listaVegetales.removeChild(listaVegetales.children[i])
                                 }
-                               // cantidadDelItem --;  esto resta 1 al segundo children que en este caso debe ser
-                               /*listaVegetales.children[i].children[2].innerHTML = cantidadDelItem; reasignamos el numero que se resto para que se vea*/
-                               // return;  este return previene la ejecucion de la linea con generarvegetal();//
-                                
-                                
-                        }
-                        
-                }
-                                                                                      
-                           
-                        }                   
-                      
-              
-        } 
-  
-               
-        
-
-       
-
+                                                              
+                        }                        
+                }                                                                                   
+                          
+                        }                
+                                 
+        }
+            
+      
        function seleccionCarnes(){
         if(listaCarnes.children.length > 0)
         {
-                for(let i=0; i < listaCarnes.children.length; i++) //por cada vegetal que el usuario haya seleccionado
+                for(let i=0; i < listaCarnes.children.length; i++) 
                 {               
                         
                   
-                        if(listaCarnes.children[i].children[1].innerHTML == carneSeleccionada) //entre los hijos del titulo de vegetales, revisar si su hijo numero 1 (es decir, Nombre del item), es igual al que escogio el usuario. Si lo es, sumar uno a la cantidad existente. Si no existe, crear uno nuevo
+                        if(listaCarnes.children[i].children[1].innerHTML == carneSeleccionada) 
                         {                        
-                                if(listaCarnes.children[i].children.length <3) continue; //confirmando que existe el elemento 3ro del array 
-                                let cantidadDelItem = parseInt(listaCarnes.children[i].children[2].innerHTML); //obtiene el int del children numero 2
-                                cantidadDelItem ++;  //esto suma 1 al segundo children que en este caso debe ser
-                                listaCarnes.children[i].children[2].innerHTML = cantidadDelItem; //reasignamos el numero que se incremento para que se vea
-                                return; // este return previene la ejecucion de la linea con generarvegetal();
+                                if(listaCarnes.children[i].children.length <3) continue;
+                                let cantidadDelItem = parseInt(listaCarnes.children[i].children[2].innerHTML); 
+                                cantidadDelItem ++;  
+                                listaCarnes.children[i].children[2].innerHTML = cantidadDelItem;  
+                                return; 
                         }
                 } 
         }     
@@ -169,7 +135,6 @@ function desincorporarVegetales(){
         console.log(seleccionCarnes);
        
 }
-
 
 function generarCarnes(){
         if(!selectorCarnes == 0){
@@ -187,8 +152,8 @@ function generarCarnes(){
         nombreDelItem.id = carneSeleccionada;
         nombreDelItem.innerHTML = `${carneSeleccionada}`; 
 
-        let cantidadDelItem = document.createElement("div"); //creamos un div nuevo para la cantidad
-        cantidadDelItem.id = "cantidadDe"+ carneSeleccionada; //cantidadDe vegetal seleccionado como ID
+        let cantidadDelItem = document.createElement("div");
+        cantidadDelItem.id = "cantidadDe"+ carneSeleccionada; 
         cantidadDelItem.innerHTML = `1`;
 
         let btnEliminarProducto = document.createElement("button");
@@ -221,7 +186,11 @@ function desincorporarCarnes(){
                         let cantidadDelItem = parseInt(listaCarnes.children[i].children[2].innerHTML); 
                         cantidadDelItem --;
                         listaCarnes.children[i].children[2].innerHTML = cantidadDelItem;
-                        return;
+                        if(cantidadDelItem <= 0){
+                                                                               
+                                listaCarnes.removeChild(listaCarnes.children[i]);
+                        }
+                                                      
                 }
         }
 }
@@ -235,23 +204,21 @@ function seleccionHogar(){
                 {               
                         
                   
-                        if(listaHogar.children[i].children[1].innerHTML == hogarSeleccionado) //entre los hijos del titulo de vegetales, revisar si su hijo numero 1 (es decir, Nombre del item), es igual al que escogio el usuario. Si lo es, sumar uno a la cantidad existente. Si no existe, crear uno nuevo
+                        if(listaHogar.children[i].children[1].innerHTML == hogarSeleccionado) 
                         {                        
-                                if(listaHogar.children[i].children.length <3) continue; //confirmando que existe el elemento 3ro del array 
-                                let cantidadDelItem = parseInt(listaHogar.children[i].children[2].innerHTML); //obtiene el int del children numero 2
-                                cantidadDelItem ++;  //esto suma 1 al segundo children que en este caso debe ser
-                                listaHogar.children[i].children[2].innerHTML = cantidadDelItem; //reasignamos el numero que se incremento para que se vea
-                                return; // este return previene la ejecucion de la linea con generarvegetal();
+                                if(listaHogar.children[i].children.length <3) continue; 
+                                let cantidadDelItem = parseInt(listaHogar.children[i].children[2].innerHTML); 
+                                cantidadDelItem ++;  
+                                listaHogar.children[i].children[2].innerHTML = cantidadDelItem; 
+                                return; 
                         }
                 } 
         }
         
         generarHogar();
-}   
-        
+}  
+       
       
-
-
 
 function generarHogar(){
         if(!selectorHogar == 0){
@@ -269,9 +236,9 @@ function generarHogar(){
         nombreDelItem.id = hogarSeleccionado;
         nombreDelItem.innerHTML = `${hogarSeleccionado}`; 
 
-        let cantidadDelItem = document.createElement("div"); //creamos un div nuevo para la cantidad//
-        cantidadDelItem.id = "cantidadDe"+hogarSeleccionado; //cantidadDe vegetal seleccionado como ID//
-        cantidadDelItem.innerHTML = `1`; //1 item porque es el primero, tiene posicion 1 en el array//
+        let cantidadDelItem = document.createElement("div"); 
+        cantidadDelItem.id = "cantidadDe"+hogarSeleccionado; 
+        cantidadDelItem.innerHTML = `1`; 
                
 
         let btnEliminarProducto = document.createElement("button");
@@ -295,28 +262,29 @@ function generarHogar(){
 function desincorporarHogar(){
         if(listaHogar.children.length > 0)
         {
-                for(let i=0; i < listaHogar.children.length; i++) //por cada vegetal que el usuario haya seleccionado
+                for(let i=0; i < listaHogar.children.length; i++)
                 {               
                         
                   
-                        if(listaHogar.children[i].children[1].innerHTML == hogarSeleccionado); //entre los hijos del titulo de vegetales, revisar si su hijo numero 1 (es decir, Nombre del item), es igual al que escogio el usuario. Si lo es, sumar uno a la cantidad existente. Si no existe, crear uno nuevo
+                        if(listaHogar.children[i].children[1].innerHTML == hogarSeleccionado);
                         
                         {                        
-                                if(listaHogar.children[i].children.length <3) continue; //confirmando que existe el elemento 3ro del array 
-                                let cantidadDelItem = parseInt(listaHogar.children[i].children[2].innerHTML);// obtiene el int del children numero 2//
-                                cantidadDelItem --;  //esto resta 1 al segundo children que en este caso debe ser
-                                listaHogar.children[i].children[2].innerHTML = cantidadDelItem;// reasignamos el numero que se resto para que se vea//
-                                return; // este return previene la ejecucion de la linea con generarvegetal();
+                                if(listaHogar.children[i].children.length <3) continue; 
+                                let cantidadDelItem = parseInt(listaHogar.children[i].children[2].innerHTML);
+                                cantidadDelItem --;  
+                                listaHogar.children[i].children[2].innerHTML = cantidadDelItem;
+                                if(cantidadDelItem <= 0){
+                                                                               
+                                        listaHogar.removeChild(listaHogar.children[i])
+                                }
+                                                              
+                                
                         }
                 } 
         } 
 }    
-               
+              
         
-
-
-
-
 function escuchar(){
         btnVegetales.addEventListener("click", seleccionVegetales);
         btnCarniceria.addEventListener("click", seleccionCarnes);
