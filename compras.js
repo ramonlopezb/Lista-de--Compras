@@ -104,6 +104,7 @@ function desincorporarVegetales(){
                                                                                
                                         listaVegetales.removeChild(listaVegetales.children[i])
                                 }
+                                
                                                               
                         }                        
                 }                                                                                   

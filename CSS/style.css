@@ -1,14 +1,15 @@
 body{
-    width: 1200px;
-    height: 900px;
+  background-color: aqua;
+    width: 900px;
+    height: 700px;
     font-family: roboto,helvetica,Arial, Helvetica, sans-serif;
     position:relative;
     
 }
 .section0{
   background-image: url(https://images.unsplash.com/photo-1578916171728-46686eac8d58?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8aHlwZXJtZXJjYWRvfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60);
-  width: 1200px;
-  height: 450px;
+  width: 1000px;
+  height: 350px;
   background-color: white;
 }
 h1{
@@ -82,9 +83,9 @@ h2.hogar{
    }
    .section1{
     position:relative;
-    width: 1200px;
-    height: 450px;
-    background-color:white;
+    width: 1000px;
+    height: 350px;
+    background-color:rgb(255, 255, 255);
      }
      .item{
       width:230px;
