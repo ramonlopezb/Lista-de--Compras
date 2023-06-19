@@ -3,8 +3,10 @@ body{
     height: 900px;
     font-family: roboto,helvetica,Arial, Helvetica, sans-serif;
     position:relative;
+    
 }
 .section0{
+  background-image: url(https://images.unsplash.com/photo-1578916171728-46686eac8d58?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8aHlwZXJtZXJjYWRvfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60);
   width: 1200px;
   height: 450px;
   background-color: white;
@@ -90,6 +92,7 @@ h2.hogar{
       position: relative;
      }
    .section2{
+    background-image: url(https://images.unsplash.com/photo-1607930231977-1c1668f74067?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fHZlZ2V0YWxlcyUyMHklMjBjYXJuZXN8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60);
    position:absolute;
    top:20px;
    width: 270px;
@@ -200,9 +203,10 @@ h2.hogar{
       
 
   .section3{
+    background-image: url(https://images.unsplash.com/photo-1602470520998-f4a52199a3d6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8Y2FybmVzfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60);
     position: absolute;
     top:20px;
-    left:300px;
+    left:300px;   
     width: 270px;
     height: 250px;
     background-color:red;
@@ -293,6 +297,7 @@ h2.hogar{
   }
 
    .section4{
+    background-image: url(https://images.unsplash.com/photo-1544612332-f405ddff69ed?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fHZhc29zJTIwcGxhdG9zfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60);
     position: absolute;
     top:20px;
     right:50px;
